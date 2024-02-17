@@ -1,0 +1,49 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import HomeCard from "../components/HomeCard.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-900">
+    <Header />
+    <!-- <HomeCard /> -->
+    <!-- <Footer /> -->
+    <main class="max-w-5xl px-4 m-auto">
+      <slot />
+    </main>
+  </body>
+
+  <style is:global>
+    /* :root {
+    color-scheme: light dark;
+  } */
+    html {
+      font-family: system-ui, sans-serif;
+      background-size: 224px;
+      color-scheme: dark light; /* we are applying dark mode to everything */
+    }
+    body {
+      background: #050505;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+    }
+  </style>
+</html>
