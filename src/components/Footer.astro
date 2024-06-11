@@ -1,19 +1,33 @@
 ---
 import HeaderButton from "./HeaderButton.astro";
-
-console.log("here goes javascript code");
+import HomeCardButton from "./HomeCardButton.astro";
+import Facebook from "./icons/Facebook.astro";
+import Instagram from "./icons/Instagram.astro";
 ---
 
-<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
-  <div class="mx-auto text-center mb-8 lg:mb-16">
-    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-      2024 creado por Marcel fumega
-    </h2>
-  </div>
-</header>
+<footer class="flex flex-col justify-center items-center py-3 px-5 m-16">
+  <nav class="flex justify-items-center gap-x-10 opacity-80">
+    <HeaderButton>Inicio</HeaderButton>
+    <HeaderButton>Portafolio</HeaderButton>
+    <HeaderButton>Como trabajo</HeaderButton>
+    <HeaderButton>Acerca de mi</HeaderButton>
+    <HeaderButton>Entregas</HeaderButton>
+  </nav>
+  <nav class="flex justify-center items-center gap-10 opacity-80">
+    <HeaderButton>
+      <Instagram class="w-30 h-30" />
+    </HeaderButton>
+    <HeaderButton>
+      <Facebook class="w-30 h-30" />
+    </HeaderButton>
+  </nav>
+  <div class="text-gray-500">Copyright © 2024 Your Company</div>
+</footer>
 
-<nav
-  class="flex flex-col items-center justify-between w-full text-center md:flex-row"
->
-  <HeaderButton class="text-white" href="/">Terminos de copyright</HeaderButton>
-</nav>
+<style>
+  footer {
+    display: flex;
+    gap: 2rem;
+    margin-top: 8rem;
+  }
+</style>

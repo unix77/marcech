@@ -1,20 +1,37 @@
 ---
-import HeaderButton from "./HeaderButton.astro";
+import HomeCardButton from "./HomeCardButton.astro";
+import SocialPill from "./icons/SocialPill.astro";
+import Camera from "./icons/Camera.astro";
+import Video from "./icons/Video.astro";
+import CustomButton from "./CustomButton.astro";
 ---
 
-<div class="mx-auto text-center mb-8 lg:mb-16">
-  <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-    Marcel Guilleron
-  </h2>
-  <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-    Donde cada imagen es un cuento y cada video una historia. Sumate al viaje
-    visual, aca la magia esta en cada detalle
-  </p>
+<div class="col-span-1 justify-center flex flex-col items-center">
+  <SocialPill>
+    <div class="mx-auto text-center mb-8 lg:mb-16">
+      <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+        Marcel Fumega
+      </h2>
+      <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+        Donde cada imagen es un cuento y cada video una historia. Sumate al
+        viaje visual, aca la magia esta en cada detalle
+      </p>
+    </div>
+  </SocialPill>
+  <nav class="items-center justify-between w-full text-center md:flex-row py-8">
+    <div class="md:space-x-6">
+      <CustomButton>
+        <Camera slot="after" width="30" />Fotografia
+      </CustomButton>
+      <CustomButton>
+        <Video slot="after" width="30" />Video
+      </CustomButton>
+    </div>
+    <div class="mt-4">
+      <CustomButton>
+        <Video slot="after" width="30" />Descubre como trabajo
+      </CustomButton>
+    </div>
+  </nav>
 </div>
-
-<nav
-  class="flex flex-col items-center justify-between w-full text-center md:flex-row"
->
-  <HeaderButton class="text-white" href="/">Fotografia</HeaderButton>
-  <HeaderButton class="text-white" href="/">Video</HeaderButton>
-</nav>
+<div class="col-span-1"></div>

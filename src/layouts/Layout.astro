@@ -14,19 +14,27 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Contrata a marcel para obtener las mejores fotos y videos que quieras. 
+    Fotografo y videomaker profesional. Especializado en capturar momentos unicos."
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-gray-900">
-    <Header />
-    <!-- <HomeCard /> -->
-    <!-- <Footer /> -->
-    <main class="max-w-5xl px-4 m-auto">
-      <slot />
-    </main>
+  <body>
+    <div
+      class="h-screen relative p-2 gap-2 bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    >
+      <Header />
+      <main class="max-w-screen-xl px-4 mx-auto">
+        <slot />
+      </main>
+
+      <Footer />
+    </div>
   </body>
 
   <style is:global>

@@ -1,0 +1,45 @@
+---
+import PictureCard from "./PictureCard.jsx";
+const pictures = [
+  {
+    id: 1,
+    category: 1,
+    caption: "AliPortrait1",
+    imageUrl:
+      "https://i.pinimg.com/736x/5c/09/c4/5c09c4dc82dc441dfb26975fe8dc1634.jpg",
+  },
+  {
+    id: 2,
+    category: 2,
+    caption: "Paco1",
+    imageUrl:
+      "https://hips.hearstapps.com/ghk.h-cdn.co/assets/16/08/gettyimages-530330473.jpg?crop=0.659xw:0.990xh;0.123xw,0.00779xh&resize=980:*",
+  },
+  {
+    id: 3,
+    category: 3,
+    caption: "Montevideo1",
+    imageUrl:
+      "https://preview.redd.it/c0kbodru7xb71.jpg?width=640&crop=smart&auto=webp&s=d5427c372779888ea5a1f4d113bbac19f90dfac4",
+  },
+];
+---
+
+<div class="gallery mx-auto text-center mb-8 lg:mb-16">
+  <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+    Gallery
+  </h2>
+  <div class="grid grid-cols-3">
+    {
+      pictures.map((picture) => (
+        <PictureCard
+          client:load
+          id={picture.id}
+          category={picture.category}
+          caption={picture.caption}
+          imageUrl={picture.imageUrl}
+        />
+      ))
+    }
+  </div>
+</div>
