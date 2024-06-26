@@ -29,7 +29,7 @@ const pictures = [
   <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
     Gallery
   </h2>
-  <div class="grid grid-cols-3">
+  <div id="gallerryWrapper">
     {
       pictures.map((picture) => (
         <PictureCard
@@ -43,3 +43,13 @@ const pictures = [
     }
   </div>
 </div>
+
+<style>
+  #gallerryWrapper {
+    --gutter: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: var(--gutter);
+  }
+</style>
