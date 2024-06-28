@@ -25,10 +25,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <div
-      class="h-screen relative p-2 gap-2 bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="h-screen relative p- gap-2 bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      id="mainSection"
     >
-      <Header />
       <main class="max-w-screen-xl px-4 mx-auto">
         <slot />
       </main>
@@ -38,9 +39,6 @@ const { title } = Astro.props;
   </body>
 
   <style is:global>
-    /* :root {
-    color-scheme: light dark;
-  } */
     html {
       font-family: system-ui, sans-serif;
       background-size: 224px;
@@ -55,3 +53,11 @@ const { title } = Astro.props;
     }
   </style>
 </html>
+
+<style>
+  #mainSection {
+    background-image: url("public/MarceBackground.jpg"); /* Replace with the path to your image */
+    background-size: cover; /* Cover the entire background */
+    opacity: 0.9; /* Adjust transparency (0 to 1, where 0 is fully transparent) */
+  }
+</style>
