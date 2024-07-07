@@ -1,4 +1,4 @@
-import "../styles/PictureCard.css";
+// import "../styles/PictureCard.css";
 import { useState } from "react";
 
 function handleClick(category) {
