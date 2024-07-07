@@ -2,33 +2,35 @@
 import HeaderButton from "./HeaderButton.astro";
 import Instagram from "../components/icons/Instagram.astro";
 import Facebook from "../components/icons/Facebook.astro";
+import "../styles/Header.css";
 
 console.log("here goes javascript code");
 ---
 
-<header class="flex justify-between items-center p-3 px-5">
-  <img
-    class="rounded-full size-16"
-    src="https://media.licdn.com/dms/image/D4D03AQGpXgaHw1g6lw/profile-displayphoto-shrink_800_800/0/1697292792760?e=2147483647&v=beta&t=PJwuZkVyIvhnu5xJuPZ5AzujRwUFnYASuiprVHdMXYk"
-    alt="phmarcech photo"
-  />
-  <nav class="flex flex-row gap-x-10 opacity-80">
-    <HeaderButton>Inicio</HeaderButton>
-    <HeaderButton>Portafolio</HeaderButton>
-    <HeaderButton>Como trabajo</HeaderButton>
-    <HeaderButton>Acerca de mi</HeaderButton>
-    <HeaderButton>Entregas</HeaderButton>
-    <HeaderButton>
-      <Instagram class="w-30 h-30" />
-    </HeaderButton>
-    <HeaderButton>
-      <Facebook class="w-30 h-30" />
-    </HeaderButton>
+<header class="flex justify-between p-3 px-5 mx-auto">
+  <nav class="flex items-center gap-x-10">
+    <img
+      class="rounded-full size-16"
+      src="https://media.licdn.com/dms/image/D4D03AQGpXgaHw1g6lw/profile-displayphoto-shrink_800_800/0/1697292792760?e=2147483647&v=beta&t=PJwuZkVyIvhnu5xJuPZ5AzujRwUFnYASuiprVHdMXYk"
+      alt="phmarcech photo"
+    />
+
+    <ul class="flex flex-col sm:flex-row items-center gap-5 opacity-80">
+      <HeaderButton>Iniciar Sesion</HeaderButton>
+      <HeaderButton>Inicio</HeaderButton>
+      <HeaderButton>Portafolio</HeaderButton>
+      <HeaderButton>Como trabajo</HeaderButton>
+      <HeaderButton>Acerca de mi</HeaderButton>
+      <HeaderButton>Entregas</HeaderButton>
+    </ul>
+
+    <div class="flex gap-5">
+      <HeaderButton>
+        <Instagram class="w-8 h-8" />
+      </HeaderButton>
+      <HeaderButton>
+        <Facebook class="w-8 h-8" />
+      </HeaderButton>
+    </div>
   </nav>
 </header>
-<style>
-  header {
-    display: flex;
-    gap: 5rem;
-  }
-</style>

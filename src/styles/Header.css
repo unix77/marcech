@@ -1,0 +1,6 @@
+.header {
+  --gutter: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+}
