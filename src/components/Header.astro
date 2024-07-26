@@ -1,5 +1,5 @@
 ---
-import HeaderButton from "./HeaderButton.astro";
+import PageWrapperButton from "./PageWrapperButton.astro";
 import Instagram from "../components/icons/Instagram.astro";
 import Facebook from "../components/icons/Facebook.astro";
 import "../styles/Header.css";
@@ -16,21 +16,21 @@ console.log("here goes javascript code");
     />
 
     <ul class="flex flex-col sm:flex-row items-center gap-5 opacity-80">
-      <HeaderButton>Iniciar Sesion</HeaderButton>
-      <HeaderButton>Inicio</HeaderButton>
-      <HeaderButton>Portafolio</HeaderButton>
-      <HeaderButton>Como trabajo</HeaderButton>
-      <HeaderButton>Acerca de mi</HeaderButton>
-      <HeaderButton>Entregas</HeaderButton>
+      <PageWrapperButton>Iniciar Sesion</PageWrapperButton>
+      <PageWrapperButton>Inicio</PageWrapperButton>
+      <PageWrapperButton>Portafolio</PageWrapperButton>
+      <PageWrapperButton>Como trabajo</PageWrapperButton>
+      <PageWrapperButton>Acerca de mi</PageWrapperButton>
+      <PageWrapperButton>Entregas</PageWrapperButton>
     </ul>
 
     <div class="flex gap-5">
-      <HeaderButton>
+      <PageWrapperButton>
         <Instagram class="w-8 h-8" />
-      </HeaderButton>
-      <HeaderButton>
+      </PageWrapperButton>
+      <PageWrapperButton>
         <Facebook class="w-8 h-8" />
-      </HeaderButton>
+      </PageWrapperButton>
     </div>
   </nav>
 </header>

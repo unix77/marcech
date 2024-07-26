@@ -1,24 +1,24 @@
 ---
-import HeaderButton from "./HeaderButton.astro";
+import PageWrapperButton from "./PageWrapperButton.astro";
 import Facebook from "./icons/Facebook.astro";
 import Instagram from "./icons/Instagram.astro";
 ---
 
 <footer class="flex flex-col justify-center items-center py-3 px-5 m-16">
   <nav class="flex justify-items-center gap-x-10 opacity-80">
-    <HeaderButton>Inicio</HeaderButton>
-    <HeaderButton>Portafolio</HeaderButton>
-    <HeaderButton>Como trabajo</HeaderButton>
-    <HeaderButton>Acerca de mi</HeaderButton>
-    <HeaderButton>Entregas</HeaderButton>
+    <PageWrapperButton>Inicio</PageWrapperButton>
+    <PageWrapperButton>Portafolio</PageWrapperButton>
+    <PageWrapperButton>Como trabajo</PageWrapperButton>
+    <PageWrapperButton>Acerca de mi</PageWrapperButton>
+    <PageWrapperButton>Entregas</PageWrapperButton>
   </nav>
   <nav class="flex justify-center items-center gap-10 opacity-80">
-    <HeaderButton>
+    <PageWrapperButton>
       <Instagram class="w-30 h-30" />
-    </HeaderButton>
-    <HeaderButton>
+    </PageWrapperButton>
+    <PageWrapperButton>
       <Facebook class="w-30 h-30" />
-    </HeaderButton>
+    </PageWrapperButton>
   </nav>
   <div class="text-gray-500">Copyright © 2024 Your Company</div>
 </footer>
