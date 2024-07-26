@@ -1,13 +1,12 @@
 // import "../styles/PictureCard.css";
 import { useState } from "react";
 
-function handleClick(category) {
-  console.log('Button clicked!');
-  console.log('Category:', category);
-}
-
-export function PictureCard({ id, category, caption, imageUrl }) {
+export default function PictureCard({ id, category, caption, imageUrl }) {
   const [isSelected, setIsSelected] = useState(false);
+  const handleClick = (category) => {
+    console.log('Button clicked!');
+    console.log('Category:', category);
+  }
 
   console.log(`Image is  ${id} ${category} ${caption} ${imageUrl}`);
 
@@ -19,5 +18,3 @@ export function PictureCard({ id, category, caption, imageUrl }) {
 
   );
 }
-
-export default PictureCard;
