@@ -8,23 +8,21 @@ console.log("here goes javascript code");
 ---
 
 <header class="block p-3 mx-auto">
-  <nav class="flex items-center gap-x-10">
+  <nav class="flex flex-col md:flex-row items-center gap-5 md:gap-x-10">
     <img
-      class="rounded-full size-16"
+      class="rounded-full w-16 h-16"
       src="https://media.licdn.com/dms/image/D4D03AQGpXgaHw1g6lw/profile-displayphoto-shrink_800_800/0/1697292792760?e=2147483647&v=beta&t=PJwuZkVyIvhnu5xJuPZ5AzujRwUFnYASuiprVHdMXYk"
       alt="phmarcech photo"
     />
-
     <ul class="flex flex-col sm:flex-row items-center gap-5 opacity-80">
-      <HeaderButton>Iniciar Sesion</HeaderButton>
-      <HeaderButton>Inicio</HeaderButton>
-      <HeaderButton>Portafolio</HeaderButton>
-      <HeaderButton>Como trabajo</HeaderButton>
-      <HeaderButton>Acerca de mi</HeaderButton>
-      <HeaderButton>Entregas</HeaderButton>
+      <li><HeaderButton>Iniciar Sesion</HeaderButton></li>
+      <li><HeaderButton>Inicio</HeaderButton></li>
+      <li><HeaderButton>Portafolio</HeaderButton></li>
+      <li><HeaderButton>Como trabajo</HeaderButton></li>
+      <li><HeaderButton>Acerca de mi</HeaderButton></li>
+      <li><HeaderButton>Entregas</HeaderButton></li>
     </ul>
-
-    <div class="flex gap-5">
+    <div class="flex gap-5 mt-5 md:mt-0">
       <HeaderButton>
         <Instagram class="w-8 h-8" />
       </HeaderButton>
