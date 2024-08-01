@@ -2,13 +2,10 @@
 import HomeCard from "./HomeCard.astro";
 ---
 
-<div class="grid grid-cols-2 h-screen">
-  <!-- <div class="grid grid-cols-2 h-screen"
-style="background-image: url('public/MarceBackground.jpg');"
-> -->
-  {/* Added h-screen class */}
-  <div class="col-span-1 flex justify-center items-center">
-    {/* Centering content vertically */}
+<div
+  class="md:grid md:grid-cols-2 h-screen p-2 flex justify-center items-center"
+>
+  <div class="md:col-span-1">
     <HomeCard />
   </div>
 </div>
