@@ -26,10 +26,8 @@ const pictures = [
 ---
 
 <div class="gallery mx-auto text-center mb-8 lg:mb-16">
-  <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-    Gallery
-  </h2>
-  <div id="gallerryWrapper">
+  <h2 class="m-4 text-5xl tracking-tight font-extrabold text-white">Gallery</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     {
       pictures.map((picture) => (
         <PictureCard
@@ -43,13 +41,3 @@ const pictures = [
     }
   </div>
 </div>
-
-<style>
-  #gallerryWrapper {
-    --gutter: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    flex-wrap: wrap;
-    gap: var(--gutter);
-  }
-</style>
