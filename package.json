@@ -16,6 +16,7 @@
     "@types/react": "^18.2.69",
     "@types/react-dom": "^18.2.22",
     "astro": "^4.15.8",
+    "axios": "^1.7.7",
     "node": "^21.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
