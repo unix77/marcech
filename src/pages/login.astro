@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import axios from "axios";
+import Form from "../components/Form";
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_BACKEND_API_URL,
+});
+---
+
+<Layout title="Portfolio de PhMarcech - Iniciar sesion">
+  <Form
+    route={`${import.meta.env.VITE_BACKEND_API_URL}/api/token/`}
+    method="login"
+    client:load
+  />
+</Layout>

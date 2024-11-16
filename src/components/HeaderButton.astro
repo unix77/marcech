@@ -1,4 +1,8 @@
-<a class="hover:scale-110 transition" href="/">
+---
+const {href} = Astro.props;
+---
+
+<a class="hover:scale-110 transition" href={href}>
   <slot name="before" />
   <slot />
   <slot name="after" />

@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import axios from "axios";
+import Form from "../components/Form";
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_BACKEND_API_URL,
+});
+---
+
+<Layout title="Portfolio de PhMarcech - Registrarse">
+  {console.log("Backend API dfsfdsa:", import.meta.env.VITE_BACKEND_API_URL)}
+  <Form
+    route={`${import.meta.env.VITE_BACKEND_API_URL}/api/user/register`}
+    method="register"
+    client:load
+  />
+</Layout>
