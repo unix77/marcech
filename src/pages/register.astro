@@ -8,10 +8,11 @@ const api = axios.create({
 });
 ---
 
-<Layout title="Portfolio de PhMarcech - Iniciar sesion">
+<Layout title="Portfolio de PhMarcech - Registrarse">
+  {console.log("Backend API dfsfdsa:", import.meta.env.VITE_BACKEND_API_URL)}
   <Form
-    route={`${import.meta.env.VITE_BACKEND_API_URL}/api/token/`}
-    method="login"
+    route={`${import.meta.env.VITE_BACKEND_API_URL}/api/user/register`}
+    method="register"
     client:load
   />
 </Layout>
