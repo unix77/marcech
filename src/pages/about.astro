@@ -1,8 +1,39 @@
 ---
+// src/pages/about.astro
 import Layout from "../layouts/Layout.astro";
+
+// Fetch data from my backend API (change the URL to your actual endpoint)
+const response = await fetch("http://localhost:3000/clients/about");
+const photographerData = await response.json();
 ---
 
-<Layout title="About the proyect">
-  <h1>Sobre el projecto</h1>
-  <p>Este proyecto es una demostracion de mis trabajos</p>
+<Layout title="Sobre el Proyecto">
+  <h1 class="text-2xl font-bold mb-4">Sobre el Proyecto</h1>
+  <p class="mb-6">
+    Este proyecto es una demostración de mis trabajos como fotógrafo.
+  </p>
+
+  {
+    photographerData?.map(
+      (person: {
+        name: string;
+        specialty: string;
+        location: string;
+        bio: string;
+      }) => (
+        <section class="mb-4 p-4 border rounded">
+          <h2 class="text-xl font-semibold">{person.name}</h2>
+          <p>
+            <strong>Especialidad:</strong> {person.specialty}
+          </p>
+          <p>
+            <strong>Ubicación:</strong> {person.location}
+          </p>
+          <p>
+            <strong>Biografía:</strong> {person.bio}
+          </p>
+        </section>
+      )
+    )
+  }
 </Layout>
