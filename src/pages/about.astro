@@ -2,8 +2,9 @@
 // src/pages/about.astro
 import Layout from "../layouts/Layout.astro";
 
-// Fetch data from my backend API (change the URL to your actual endpoint)
-const response = await fetch("http://localhost:3000/clients/about");
+// Fetch data from my backend API using environment variable
+const backendUrl = import.meta.env.VITE_BACKEND_API_URL;
+const response = await fetch(`${backendUrl}/clients/about`);
 const photographerData = await response.json();
 ---
 

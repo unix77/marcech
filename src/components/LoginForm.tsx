@@ -14,7 +14,8 @@ export default function LoginForm() {
       .value;
 
     try {
-      const res = await fetch("http://localhost:3000/api/login", {
+      const backendUrl = import.meta.env.VITE_BACKEND_API_URL;
+      const res = await fetch(`${backendUrl}/api/login`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
